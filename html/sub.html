@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xi-renewal-sub</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/sub.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <section id="search">
+            <div class="search-inner">
+                <div class="search-top">
+                    <p>고객님께 맞는<br> 자이 아파트를 찾아보세요.</p>
+                    <div>
+                        <label>
+                            <input type="search" placeholder="단지명을 입력해 주세요">
+                            <img src="../assets/images/sub/search_icon.png" alt="검색 아이콘">
+                        </label>
+                        <button><img src="../assets/images/sub/reset_icon.png" alt="초기화 아이콘"><span>초기화</span></button>
+                    </div>
+                </div>
+                <div class="search-bottom">
+                    <div class="situation">
+                        <span>분양 상태</span>
+                        <ul>
+                            <li>
+                                <input type="radio" name="situation" checked><label>전체</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="situation"><label>분양예정</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="situation"><label>분양중</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="zone">
+                        <span>분양 지역</span>
+                        <ul>
+                            <li>
+                                <input type="radio" name="zone" checked><label>전체</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="zone"><label>수도권</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="zone"><label>강원지역</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="zone"><label>충청지역</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="zone"><label>호남지역</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="zone"><label>영남지역</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="size">
+                        <span>분양 면적</span>
+                        <ul>
+                            <li>
+                                <input type="radio" name="size" checked><label>전체</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="size"><label>0~65m&sup2;</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="size"><label>66~100m&sup2;</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="size"><label>101~130m&sup2;</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="size"><label>131~165m&sup2;</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="size"><label>166m&sup2; 이상</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="result">
+            <div class="result-inner">
+                <p>총 <span>12</span>개의 아파트를 찾았습니다</p>
+                <div class="result-container">
+                    <div class="result-item">
+                        <div class="item-img thumbnail-1"></div>
+                        <button>분양중</button>
+                        <div class="item-explain">
+                            <span>715세대</span>
+                            <input type="checkbox" name="favorite" id="favorite1"><label for="favorite1"></label>
+                            <strong>복대자이 더 스카이</strong>
+                            <ul class="item-info">
+                                <li><span>단지위치</span>충청북도 청주시 흥덕구 복대동 100-28</li>
+                                <li><span>분양시기</span>2023.&nbsp;02</li>
+                                <li><span>입주시기</span>2024.&nbsp;05</li>
+                                <li><span>문의전화</span><a href="tel:16601533">1660-1533</a></li>
+                            </ul>
+                            <ul class="info-more">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/detail-icon.png" alt="상세보기 아이콘">상세보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/map-icon.png" alt="지도보기 아이콘">지도보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/question-icon.png" alt="고객문의 아이콘">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="item-img thumbnail-2"></div>
+                        <button>분양중</button>
+                        <div class="item-explain">
+                            <span>931세대 / 일반분양 116세대</span>
+                            <input type="checkbox" name="favorite" id="favorite2"><label for="favorite2"></label>
+                            <strong>남천자이</strong>
+                            <ul class="item-info">
+                                <li><span>단지위치</span>부산광역시 수영구 남천동 148-28번지 일원</li>
+                                <li><span>분양시기</span>2022.&nbsp;12</li>
+                                <li><span>입주시기</span>2023.&nbsp;01</li>
+                                <li><span>문의전화</span><a href="tel:16601533">1660-0913</a></li>
+                            </ul>
+                            <ul class="info-more">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/detail-icon.png" alt="상세보기 아이콘">상세보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/map-icon.png" alt="지도보기 아이콘">지도보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/question-icon.png" alt="고객문의 아이콘">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="item-img thumbnail-3"></div>
+                        <button>분양중</button>
+                        <div class="item-explain">
+                            <span>3,804세대</span>
+                            <input type="checkbox" name="favorite" id="favorite3"><label for="favorite3"></label>
+                            <strong>철산자이 더 헤리티지</strong>
+                            <ul class="item-info">
+                                <li><span>단지위치</span>경기도 광명시 철산동 235번지 일대</li>
+                                <li><span>분양시기</span>2022.&nbsp;12</li>
+                                <li><span>입주시기</span>2025.&nbsp;05</li>
+                                <li><span>문의전화</span><a href="tel:16601533">1661-0830</a></li>
+                            </ul>
+                            <ul class="info-more">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/detail-icon.png" alt="상세보기 아이콘">상세보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/map-icon.png" alt="지도보기 아이콘">지도보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/question-icon.png" alt="고객문의 아이콘">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="item-img thumbnail-4"></div>
+                        <button>분양중</button>
+                        <div class="item-explain">
+                            <span>2,840세대</span>
+                            <input type="checkbox" name="favorite" id="favorite4"><label for="favorite4"></label>
+                            <strong>장위자이 레디언트</strong>
+                            <ul class="item-info">
+                                <li><span>단지위치</span>서울특별시 성북구 장위동 62-1</li>
+                                <li><span>분양시기</span>2022.&nbsp;11</li>
+                                <li><span>입주시기</span>2025.&nbsp;03</li>
+                                <li><span>문의전화</span><a href="tel:16601533">1833-2644</a></li>
+                            </ul>
+                            <ul class="info-more">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/detail-icon.png" alt="상세보기 아이콘">상세보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/map-icon.png" alt="지도보기 아이콘">지도보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/question-icon.png" alt="고객문의 아이콘">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="item-img thumbnail-5"></div>
+                        <button>분양중</button>
+                        <div class="item-explain">
+                            <span>2,023세대</span>
+                            <input type="checkbox" name="favorite" id="favorite5"><label for="favorite5"></label>
+                            <strong>대명자이 그랜드시티</strong>
+                            <ul class="item-info">
+                                <li><span>단지위치</span>대구광역시 남구 대명3동 2301-2</li>
+                                <li><span>분양시기</span>2022.&nbsp;11</li>
+                                <li><span>입주시기</span>2026.&nbsp;04</li>
+                                <li><span>문의전화</span><a href="tel:16601533">1660-2050</a></li>
+                            </ul>
+                            <ul class="info-more">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/detail-icon.png" alt="상세보기 아이콘">상세보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/map-icon.png" alt="지도보기 아이콘">지도보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/question-icon.png" alt="고객문의 아이콘">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="item-img thumbnail-6"></div>
+                        <button>분양중</button>
+                        <div class="item-explain">
+                            <span>1,588세대</span>
+                            <input type="checkbox" name="favorite" id="favorite6"><label for="favorite6"></label>
+                            <strong>아산자이 그랜드파크</strong>
+                            <ul class="item-info">
+                                <li><span>단지위치</span>충청남도 아산시 용화동 137-2</li>
+                                <li><span>분양시기</span>2022.&nbsp;11</li>
+                                <li><span>입주시기</span>2026.&nbsp;02</li>
+                                <li><span>문의전화</span><a href="tel:16601533">1644-4432</a></li>
+                            </ul>
+                            <ul class="info-more">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/detail-icon.png" alt="상세보기 아이콘">상세보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/map-icon.png" alt="지도보기 아이콘">지도보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/question-icon.png" alt="고객문의 아이콘">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="item-img thumbnail-7"></div>
+                        <button>분양중</button>
+                        <div class="item-explain">
+                            <span>1,505세대</span>
+                            <input type="checkbox" name="favorite" id="favorite7"><label for="favorite7"></label>
+                            <strong>음성자이 센트럴시티</strong>
+                            <ul class="item-info">
+                                <li><span>단지위치</span>충청북도 음성군 금왕읍 무극리 504-5</li>
+                                <li><span>분양시기</span>2022.&nbsp;09</li>
+                                <li><span>입주시기</span>2025.&nbsp;11</li>
+                                <li><span>문의전화</span><a href="tel:16601533">1544-9548</a></li>
+                            </ul>
+                            <ul class="info-more">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/detail-icon.png" alt="상세보기 아이콘">상세보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/map-icon.png" alt="지도보기 아이콘">지도보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/question-icon.png" alt="고객문의 아이콘">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="item-img thumbnail-8"></div>
+                        <button>분양중</button>
+                        <div class="item-explain">
+                            <span>아파트 399세대 / 오피스텔 52실</span>
+                            <input type="checkbox" name="favorite" id="favorite8"><label for="favorite8"></label>
+                            <strong>범어자이</strong>
+                            <ul class="item-info">
+                                <li><span>단지위치</span>대구광역시 수성구 범어동 48-26번지 일원</li>
+                                <li><span>분양시기</span>2022.&nbsp;06</li>
+                                <li><span>입주시기</span>2026.&nbsp;02</li>
+                                <li><span>문의전화</span><a href="tel:16601533">1544-7720</a></li>
+                            </ul>
+                            <ul class="info-more">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/detail-icon.png" alt="상세보기 아이콘">상세보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/map-icon.png" alt="지도보기 아이콘">지도보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/question-icon.png" alt="고객문의 아이콘">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="item-img thumbnail-9"></div>
+                        <button>분양중</button>
+                        <div class="item-explain">
+                            <span>2,633세대</span>
+                            <input type="checkbox" name="favorite" id="favorite9"><label for="favorite9"></label>
+                            <strong>인덕원 자이 SK VIEW</strong>
+                            <ul class="item-info">
+                                <li><span>단지위치</span>충청남도 아산시 용화동 137-2</li>
+                                <li><span>분양시기</span>2022.&nbsp;09</li>
+                                <li><span>입주시기</span>2025.&nbsp;05</li>
+                                <li><span>문의전화</span><a href="tel:16601533">1661-3103</a></li>
+                            </ul>
+                            <ul class="info-more">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/detail-icon.png" alt="상세보기 아이콘">상세보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/map-icon.png" alt="지도보기 아이콘">지도보기
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../assets/images/sub/question-icon.png" alt="고객문의 아이콘">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-up">
+                    <button><span>+&emsp;</span>더보기</button>
+                    <button><img src="../assets/images/sub/up.png" alt="위로 이동하는 아이콘"></button>
+                </div>
+            </div>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
