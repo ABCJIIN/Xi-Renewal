@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xi-renewal-main-header</title>
+    <!-- slick 슬라이더 -->
+    <link rel="stylesheet" href="../../assets/slick/slick.css">
+    <link rel="stylesheet" href="../../assets/slick/slick-theme.css">
+    <script src="../../assets/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#videoSlider').slick({
+                slide : "div",
+                arrows: true, // next, prev 이동 버튼
+                infinite: true, //반복설정
+                autoplay : true ,
+                autoplaySpeed : 13000,
+                pauseOnHover : false,// 마우스 hover시 슬라이드 멈춤
+                pauseOnFocus: false,
+                prevArrow : $('#sliderPrev'),        
+                nextArrow : $('#sliderNext'),
+                slidesToShow: 1, //보여질 슬라이드 수
+                slidesToScroll: 1, //넘겨질 슬라이드 수
+            //     customPaging: function (slider, i) {
+            //     console.log(slider);
+            //     return  (i + 1) + '/' + slider.slideCount;
+            // }
+                
+            });
+        });
+    </script>
+    <!-- <script>
+        $(function(){
+            $('#btnbtn').click(function(){
+                var video = $('#video1');
+                video.attr('src', '../../assets/video/hero01.mp4');
+                video.get(0).play();
+            });
+        });
+    </script> -->
+    <!-- <script>
+        $(function(){
+            $(window).scroll(function(){
+                var video = $("#video1 , #video2 ,video3");
+                var btn = $("#videoBtn");
+                
+                btn.click(function(){
+                    video.get(0).play();
+                });
+                btn.click(function(){
+                    video.get(0).pause();
+                });
+            });
+        });
+    </script> -->
+    <script>
+        $(document).ready(function() {
+            $('#videoBtn').click(function(){
+                $('video').trigger('pause');
+            })
+        })
+    </script>
+    
+</head>
+<body>
+    <div class="header-wrap main-header">
+        <div id="videoSlider">
+            <div>
+                <video id="video1" src="../../assets/video/hero01.mp4" controls autoplay muted nodownload poster="../../assets/images/header/main_header.png"></video>
+            </div>
+            <div>
+                <video id="video2" src="../../assets/video/hero02.mp4" controls autoplay muted nodownload poster="../../assets/images/header/main_header.png"></video>
+            </div>
+            <div>
+                <video id="video3" src="../../assets/video/hero03.mp4" controls autoplay muted nodownload poster="../../assets/images/header/main_header.png"></video>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button id="sliderPrev"><img src="../../assets/images/header/video_prev.png" alt="비디오 이전버튼"></button>
+            <button id="videoBtn">??????????</button>
+            <button id="sliderNext"><img src="../../assets/images/header/video_next.png" alt="비디오 다음버튼"></button>
+        </div>
+        <div class="header-bottom">
+            <div class="bottom-inner">
+                <ul>
+                    <li><strong>Xi 청약을 준비하고 있어요</strong></li>
+                    <li><a href="javascript:void(0)">서류접수 사전예약<img src="../../assets/images/header/right_icon.png" alt="더보기 아이콘"></a></li>
+                    <li><a href="javascript:void(0)">청약 당첨조회<img src="../../assets/images/header/right_icon.png" alt="더보기 아이콘"></a></li>
+                </ul>
+                <ul>
+                    <li><strong>Xi 입주를 기다리고 있어요</strong></li>
+                    <li><a href="javascript:void(0)">중도금 납부 조회<img src="../../assets/images/header/right_icon.png" alt="더보기 아이콘"></a></li>
+                    <li><a href="javascript:void(0)">계약/입주 가이드<img src="../../assets/images/header/right_icon.png" alt="더보기 아이콘"></a></li>
+                </ul>
+                <ul>
+                    <li><strong>Xi로운 삶을 즐기고 있어요</strong></li>
+                    <li><a href="javascript:void(0)">입주 사전 방문 행사<img src="../../assets/images/header/right_icon.png" alt="더보기 아이콘"></a></li>
+                    <li><a href="javascript:void(0)">입주자 생활 안내<img src="../../assets/images/header/right_icon.png" alt="더보기 아이콘"></a></li>
+                </ul>
+                <div class="scroll">
+                    <span>Scroll</span>
+                    <img src="../../assets/images/header/down.png" alt="스크롤 다운 아이콘">
+                </div>
+            </div>
+        </div>
+        <div class="gnb">
+            <div class="mb-gnb">
+                <img src="../../assets/images/header/mb_gnb_btn.png">
+            </div>
+            <div class="logo">
+                <a href="javascript:void(0)">
+                    <img src="../../assets/images/header/logo.png" alt="자이 로고">
+                </a>
+            </div>
+            <ul class="gnb-main">
+                <li><a href="javascript:void(0)">단지</a></li>
+                <li><a href="javascript:void(0)">청약</a></li>
+                <li><a href="javascript:void(0)">계약/입주</a></li>
+                <li><a href="javascript:void(0)">소식</a></li>
+                <li><a href="javascript:void(0)">자이</a></li>
+            </ul>
+            <div class="gnb-sub">
+                <ul>
+                    <li><a href="javascript:void(0)">고객문의</a></li>
+                    <li><a href="javascript:void(0)">알림</a></li>
+                    <li><a href="javascript:void(0)">검색</a></li>
+                </ul>
+                <button class="main-login"><img src="../../assets/images/header/login_icon.png" alt="로그인 아이콘">로그인</button>
+            </div>
+            <div class="mb-login">
+                <img src="../../assets/images/header/mb_login_btn.png">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
