@@ -17,50 +17,33 @@
                 infinite: true, //반복설정
                 autoplay : true ,
                 autoplaySpeed : 13000,
+                dots: true,
+                // appendDots : $('.target_dots'),
+                draggable : true,
                 pauseOnHover : false,// 마우스 hover시 슬라이드 멈춤
                 pauseOnFocus: false,
                 prevArrow : $('#sliderPrev'),        
                 nextArrow : $('#sliderNext'),
                 slidesToShow: 1, //보여질 슬라이드 수
                 slidesToScroll: 1, //넘겨질 슬라이드 수
-            //     customPaging: function (slider, i) {
-            //     console.log(slider);
-            //     return  (i + 1) + '/' + slider.slideCount;
-            // }
-                
+                // initialSlide: 1,
             });
         });
     </script>
-    <!-- <script>
-        $(function(){
-            $('#btnbtn').click(function(){
-                var video = $('#video1');
-                video.attr('src', '../../assets/video/hero01.mp4');
-                video.get(0).play();
-            });
-        });
-    </script> -->
-    <!-- <script>
-        $(function(){
-            $(window).scroll(function(){
-                var video = $("#video1 , #video2 ,video3");
-                var btn = $("#videoBtn");
-                
-                btn.click(function(){
-                    video.get(0).play();
-                });
-                btn.click(function(){
-                    video.get(0).pause();
-                });
-            });
-        });
-    </script> -->
     <script>
-        $(document).ready(function() {
-            $('#videoBtn').click(function(){
-                $('video').trigger('pause');
-            })
-        })
+        $('#videoPlay').trigger('click');
+
+        function videoPlay() {
+            $('video').trigger('play');
+            $('#videoPlay').hide();
+            $('#videoPause').show();
+        }
+        function videoPause() {
+            $('video').trigger('pause');
+            $('#videoPlay').show();
+            $('#videoPause').hide();
+        }
+
     </script>
     
 </head>
@@ -68,18 +51,25 @@
     <div class="header-wrap main-header">
         <div id="videoSlider">
             <div>
-                <video id="video1" src="../../assets/video/hero01.mp4" controls autoplay muted nodownload poster="../../assets/images/header/main_header.png"></video>
+                <video id="video1" src="../../assets/video/hero01.mp4" autoplay loop muted nodownload poster="../../assets/images/header/main_header.png"></video>
             </div>
             <div>
-                <video id="video2" src="../../assets/video/hero02.mp4" controls autoplay muted nodownload poster="../../assets/images/header/main_header.png"></video>
+                <video id="video2" src="../../assets/video/hero02.mp4" autoplay loop muted nodownload poster="../../assets/images/header/main_header.png"></video>
             </div>
             <div>
-                <video id="video3" src="../../assets/video/hero03.mp4" controls autoplay muted nodownload poster="../../assets/images/header/main_header.png"></video>
+                <video id="video3" src="../../assets/video/hero03.mp4" autoplay loop muted nodownload poster="../../assets/images/header/main_header.png"></video>
             </div>
         </div>
         <div class="btn-container">
             <button id="sliderPrev"><img src="../../assets/images/header/video_prev.png" alt="비디오 이전버튼"></button>
-            <button id="videoBtn">??????????</button>
+            <!-- <div class="target_dots"></div> -->
+            <p class="vis-dots">
+                <span class="now">01</span>
+                /
+                <span class="tot">03</span>
+            </p>
+            <button onclick="videoPause()" id="videoPause">stop</button>
+            <button onclick="videoPlay()" id="videoPlay">play</button>
             <button id="sliderNext"><img src="../../assets/images/header/video_next.png" alt="비디오 다음버튼"></button>
         </div>
         <div class="header-bottom">
