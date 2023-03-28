@@ -18,11 +18,18 @@ a {text-decoration: none;}
 }
 
 .main-header {
-    /* background: url(../images/header/main_header.png) no-repeat center/cover; */
-    height: 108rem;
+    max-height: 108rem;
+    /* height: 100vh; */
+    background: none;
+    /* height: 100%; */
+    /* height: 108rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-header #videoSlider {
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -32,27 +39,68 @@ a {text-decoration: none;}
     height: 100%;
 }
 
-.main-header .btn-container {
+.main-header #videoSlider div video {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.main-header .btn-wrap {
+    width: calc(100% - 28rem);
+    padding: 0 14rem;
+    max-width: 1360px;
     position: absolute;
     bottom: 25rem;
-    left: 28rem;
 }
 
-.main-header .btn-container button {
+.main-header .btn-wrap .btn-container {
+    width: 125px;
+    /* position: absolute;
+    bottom: 25rem; */
+    /* left: 28rem; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header .btn-wrap .btn-container button {
     background: transparent;
-    height: 18rem;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* video::-webkit-media-controls-volume-slider,
-video::-webkit-media-controls-mute-button,
-video::-webkit-media-controls-current-time-display,
-video::-webkit-media-controls-time-remaining-display,
-video::-webkit-media-controls-mute-button,
-video::-webkit-media-controls-fullscreen-button,
-video::-webkit-media-controls-timeline {
-    display: none !important;
-}  */
+.main-header .btn-wrap .btn-container #sliderPrev, #sliderNext {
+    height: 18px;
+}
+
+.main-header .btn-wrap .btn-container #sliderPrev, 
+.main-header .btn-wrap .btn-container #sliderNext {
+    height: 100%;
+}
+
+.main-header .btn-wrap .btn-container .slide-page {
+    font-family: "SD Gothic Neo";
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.main-header .btn-wrap .btn-container #videoPause, #videoPlay {
+    height: 15px;
+    width: 25px;
+}
+
+.main-header .btn-wrap .btn-container #videoPause img {
+    height: 100%;
+}
+
+.main-header .btn-wrap .btn-container #videoPlay img {
+    width: 100%;
+}
+
 
 .main-header .header-bottom {
     position: absolute;
@@ -67,21 +115,15 @@ video::-webkit-media-controls-timeline {
 }
 
 .main-header .header-bottom .bottom-inner {
+    width: calc(100% - 28rem);
+    max-width: 1360px;
+    padding: 0 14rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 136rem;
+    justify-content: flex-start;
     margin: 0 auto;
     gap: 21rem;
-    /* padding-left: 28rem; */
-}
-
-.main-header .header-bottom .bottom-inner ul {
-    /* display: flex; */
-}
-
-.main-header .header-bottom .bottom-inner ul li {
-    /* display: flex; */
 }
 
 .main-header .header-bottom .bottom-inner ul li:nth-of-type(2) {
@@ -92,9 +134,8 @@ video::-webkit-media-controls-timeline {
 .main-header .header-bottom .bottom-inner ul li strong {
     color: #ffffff;
     font-family: "SD Gothic Neo";
-    font-weight: 900;
+    font-weight: 700;
     font-size: 2.3rem;
-
 }
 
 .main-header .header-bottom .bottom-inner ul li a {
@@ -109,43 +150,20 @@ video::-webkit-media-controls-timeline {
     filter: invert(95%) sepia(6%) saturate(16%) hue-rotate(346deg) brightness(86%) contrast(89%);
 }
 
-.main-header .header-bottom .bottom-inner .scroll {
+
+.main-header .header-bottom .scroll {
+    position: absolute;
+    /* right: 11.5rem; */
+    left: calc(100% - 11.5rem);
     display: flex;
     flex-direction: column;
     align-items: center;
-    -webkit-animation: sdb 1.5s infinite;
-    animation: sdb 2s infinite;
+    -webkit-animation: hdscroll 1.5s infinite;
+    animation: hdscroll 2s infinite;
     box-sizing: border-box;
 }
 
-@-webkit-keyframes sdb {
-    0% {
-      -webkit-transform: rotate(0) translate(0, 0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: rotate(0) translate(0, 40px);
-      opacity: 0;
-    }
-  }
-  @keyframes sdb {
-    0% {
-      transform: rotate(0) translate(0, 0);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: rotate(0) translate(0, 40px);
-      opacity: 0;
-    }
-  }
-
-.main-header .header-bottom .bottom-inner .scroll span {
+.main-header .header-bottom .scroll span {
     color: #ffffff;
     font-family: "SD Gothic Neo";
     font-weight: 300;
@@ -153,10 +171,37 @@ video::-webkit-media-controls-timeline {
     padding-bottom: 2.8rem;
 }
 
-.main-header .header-bottom .bottom-inner .scroll img {
+.main-header .header-bottom .scroll img {
     height: 5.2rem;
     width: 1.2rem;
 }
+
+@-webkit-keyframes hdscroll {
+    0% {
+      -webkit-transform: rotate(0) translate(0, -25px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate(0) translate(0, 25px);
+      opacity: 0;
+    }
+  }
+  @keyframes hdscroll {
+    0% {
+      transform: rotate(0) translate(0, -25px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(0) translate(0, 25px);
+      opacity: 0;
+    }
+  }
 
 .header-wrap .gnb {
     position: absolute;

@@ -17,7 +17,7 @@
                 infinite: true, //반복설정
                 autoplay : true ,
                 autoplaySpeed : 13000,
-                dots: true,
+                // dots: true,
                 // appendDots : $('.target_dots'),
                 draggable : true,
                 pauseOnHover : false,// 마우스 hover시 슬라이드 멈춤
@@ -32,7 +32,6 @@
     </script>
     <script>
         $('#videoPlay').trigger('click');
-
         function videoPlay() {
             $('video').trigger('play');
             $('#videoPlay').hide();
@@ -43,7 +42,6 @@
             $('#videoPlay').show();
             $('#videoPause').hide();
         }
-
     </script>
     
 </head>
@@ -60,17 +58,18 @@
                 <video id="video3" src="../../assets/video/hero03.mp4" autoplay loop muted nodownload poster="../../assets/images/header/main_header.png"></video>
             </div>
         </div>
-        <div class="btn-container">
-            <button id="sliderPrev"><img src="../../assets/images/header/video_prev.png" alt="비디오 이전버튼"></button>
-            <!-- <div class="target_dots"></div> -->
-            <p class="vis-dots">
-                <span class="now">01</span>
-                /
-                <span class="tot">03</span>
-            </p>
-            <button onclick="videoPause()" id="videoPause">stop</button>
-            <button onclick="videoPlay()" id="videoPlay">play</button>
-            <button id="sliderNext"><img src="../../assets/images/header/video_next.png" alt="비디오 다음버튼"></button>
+        <div class="btn-wrap">
+            <div class="btn-container">
+                <button id="sliderPrev"><img src="../../assets/images/header/video_prev.png" alt="슬라이드 이전버튼"></button>
+                <p class="slide-page">
+                    <span class="now">1</span>
+                    /
+                    <span class="total">3</span>
+                </p>
+                <button onclick="videoPause()" id="videoPause"><img src="../../assets/images/header/stop_png.png" alt="동영상 정지 버튼"></button>
+                <button onclick="videoPlay()" id="videoPlay"><img src="../../assets/images/header/play_icon.png" alt="동영상 재생 버튼"></button>
+                <button id="sliderNext"><img src="../../assets/images/header/video_next.png" alt="슬라이드 다음버튼"></button>
+            </div>
         </div>
         <div class="header-bottom">
             <div class="bottom-inner">
@@ -89,10 +88,10 @@
                     <li><a href="javascript:void(0)">입주 사전 방문 행사<img src="../../assets/images/header/right_icon.png" alt="더보기 아이콘"></a></li>
                     <li><a href="javascript:void(0)">입주자 생활 안내<img src="../../assets/images/header/right_icon.png" alt="더보기 아이콘"></a></li>
                 </ul>
-                <div class="scroll">
-                    <span>Scroll</span>
-                    <img src="../../assets/images/header/down.png" alt="스크롤 다운 아이콘">
-                </div>
+            </div>
+            <div class="scroll">
+                <span>Scroll</span>
+                <img src="../../assets/images/header/down.png" alt="스크롤 다운 아이콘">
             </div>
         </div>
         <div class="gnb">

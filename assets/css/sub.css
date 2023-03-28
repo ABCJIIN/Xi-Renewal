@@ -311,7 +311,7 @@ a {text-decoration: none;}
 }
 
 .result-container .result-item .item-explain input:checked + label {
-    background: url(../images/sub/star-yellow.png);
+    background: url(../images/sub/star-yellow.png) no-repeat center;
 }
 
 .result-container .result-item .item-explain strong {
