@@ -57,9 +57,13 @@
         });
     </script>
     <script>
+
+        var playPromise = video.play();
+
         $('#collagePlay').trigger('click');
         function collageplay() {
             $('.collage-video').trigger('play');
+            if (playPromise !== undefined) { playPromise.then((_) => {}).catch((error) => {}); }
             $('#collagePlay').hide();
             $('#collageStop').show();
         }
@@ -124,8 +128,10 @@
                             <option value="size-6">131~165m&sup2;</option>
                             <option value="size-7">166m&sup2; 이상</option>
                         </select>
-                        <button class="reset">초기화</button>
-                        <button class="self">직접검색</button>
+                        <div class="btn_container">
+                            <button class="reset">초기화</button>
+                            <button class="self">직접검색</button>
+                        </div>
                     </div>
                     <div class="xi-explain">
                         <p class="respect">

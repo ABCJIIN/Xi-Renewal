@@ -26,6 +26,37 @@
             });
         });
     </script>
+
+    <script>
+                $(document).ready(function(){
+            $('.bottom-inner').slick({
+                slide : "ul",
+                mobileFirst: true,
+                arrows: true, // next, prev 이동 버튼
+                infinite: true, //반복설정
+                autoplay : false ,
+                draggable : true,
+                pauseOnHover : false,// 마우스 hover시 슬라이드 멈춤
+                pauseOnFocus: false,
+                prevArrow : $('#mbIngPrev'),        
+                nextArrow : $('#mbIngNext'),
+                slidesToShow: 1, //보여질 슬라이드 수
+                slidesToScroll: 1, //넘겨질 슬라이드 수
+                responsive: [
+                    {
+                        breakpoint: 750,
+                        settings: 'unslick'
+                    }
+                ]
+            });
+                    $(window).on('resize', function() {
+                $('.bottom-inner').slick('resize');
+            });
+        });
+
+        
+    </script>
+
     <script>
         $('#videoPlay').trigger('click');
         function videoPlay() {
@@ -39,7 +70,6 @@
             $('#videoPause').hide();
         }
     </script>
-    
 </head>
 <body>
     <div class="header-wrap main-header">
@@ -85,6 +115,10 @@
                     <li><a href="javascript:void(0)">입주자 생활 안내<img src="../../assets/images/header/right_icon.png" alt="더보기 아이콘"></a></li>
                 </ul>
             </div>
+            <div class="mb-btn-container">
+                <button id="mbIngNext"><img src="../../assets/images/header/video_next.png"></button>
+                <button id="mbIngPrev"><img src="../../assets/images/header/video_prev.png"></button>
+            </div>
             <div class="scroll">
                 <span>Scroll</span>
                 <img src="../../assets/images/header/down.png" alt="스크롤 다운 아이콘">
@@ -92,7 +126,7 @@
         </div>
         <div class="gnb">
             <div class="mb-gnb">
-                <img src="../../assets/images/header/mb_gnb_btn.png">
+                <img src="../../assets/images/header/mb_gnb_main_btn.png" alt="메뉴 버튼">
             </div>
             <div class="logo">
                 <a href="javascript:void(0)">
@@ -114,8 +148,8 @@
                 </ul>
                 <button class="main-login"><img src="../../assets/images/header/login_icon.png" alt="로그인 아이콘">로그인</button>
             </div>
-            <div class="mb-login">
-                <img src="../../assets/images/header/mb_login_btn.png">
+            <div class="mb-login mb-login-main">
+                <img src="../../assets/images/header/mb_login_main_btn.png" alt="로그인 버튼">
             </div>
         </div>
     </div>
