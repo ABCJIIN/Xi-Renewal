@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/main.css">
-    <script type="text/javascript">
+    <!-- slick 슬라이더 -->
+    <link rel="stylesheet" href="../assets/slick/slick.css">
+    <link rel="stylesheet" href="../assets/slick/slick-theme.css">
+    <script src="../assets/slick/slick.min.js"></script>
+    <script>
         window.onload = function () {
             $(".box").each(function () {
                 // 개별적으로 Wheel 이벤트 적용
@@ -42,152 +46,242 @@
             });
         }
     </script>
+    <script>
+        $( document ).ready( function() {
+            $( '#collageContainer' ).slick({
+                slide : "video",
+                autoplay: true,
+                autoplaySpeed : 13000,
+                arrows: false,
+            });
+        });
+    </script>
+    <script>
+        $('#collagePlay').trigger('click');
+        function collageplay() {
+            $('.collage-video').trigger('play');
+            $('#collagePlay').hide();
+            $('#collageStop').show();
+        }
+        function collageStop() {
+            $('.collage-video').trigger('pause');
+            $('#collagePlay').show();
+            $('#collageStop').hide();
+        }
+    </script>
 </head>
 <body>
     <div id="wrap">
-            <header id="mainHeader" class="box"></header>
-            <section id="intro">
-                <p class="extra">eXtra</p>
-                <div class="intro-wrap">
-                    <strong>eXtra intelligent</strong>
-                    <p>자이는 eXtra intelligent(특별한 지성)의 약자로, 공간에 대한 새로운 개념의 부여로 新가치를 창출하고<br>
-                        세심한 배려와 품격있는서비스로 고객을 특별한 존재로 존중하며, 고급 라이프 스타일과 수준높은 문화를 제공함으로써,<br>
-                        고객에게 특별한 삶의 수준을 경험하게 하는 고품격 아파트 브랜드입니다.
+        <header id="mainHeader" class="box"></header>
+        <section id="intro">
+            <p class="extra">eXtra</p>
+            <div class="intro-wrap">
+                <strong>eXtra<br class="mb-br"> intelligent</strong>
+                <p class="web-text">자이는 eXtra intelligent(특별한 지성)의 약자로, 공간에 대한 새로운 개념의 부여로 新가치를 창출하고<br>
+                    세심한 배려와 품격있는서비스로 고객을 특별한 존재로 존중하며, 고급 라이프 스타일과 수준높은 문화를 제공함으로써,<br>
+                    고객에게 특별한 삶의 수준을 경험하게 하는 고품격 아파트 브랜드입니다.
+                </p>
+                <p class="mb-text">자이는 eXtra intelligent(특별한 지성)의 약자로,<br> 
+                    공간에 대한 새로운 개념의 부여로 新가치를 창출하고<br>
+                    세심한 배려와 품격있는서비스로 고객을 특별한 존재로<br>
+                    존중하며, 고급 라이프 스타일과 수준높은 문화를<br>
+                    제공함으로써,고객에게 특별한 삶의 수준을 경험하게<br>
+                    하는 고품격 아파트 브랜드입니다.
+                </p>
+                <div class="img-container">
+                    <img src="../assets/images/main/xi_main1.png" alt="자이 아파트단지 이미지">
+                    <img src="../assets/images/main/xi_main2.png" alt="자이 아파트 로고 이미지">
+                </div>
+            </div>
+            <p class="intelligent">intelligent</p>
+        </section>
+        <section id="customerPick">
+            <div class="pick-inner">
+                <div class="pick-left">
+                    <div class="search">
+                        <p>고객님께 맞는<br> 자이 아파트를 찾아보세요.</p>
+                        <select name="situation" id="situation">
+                            <option value="situation-1">분양 상태</option>
+                            <option value="situation-2">전체</option>
+                            <option value="situation-3">분양예정</option>
+                            <option value="situation-4">분양중</option>
+                        </select>
+                        <select name="zone" id="zone">
+                            <option value="zone-1">분양 지역</option>
+                            <option value="zone-2">전체</option>
+                            <option value="zone-3">수도권</option>
+                            <option value="zone-4">강원지역</option>
+                            <option value="zone-5">충청지역</option>
+                            <option value="zone-5">호남지역</option>
+                            <option value="zone-5">영남지역</option>
+                        </select>
+                        <select name="size" id="size">
+                            <option value="size-1">분양 면적</option>
+                            <option value="size-2">전체</option>
+                            <option value="size-3">0~65m&sup2;</option>
+                            <option value="size-4">66~100m&sup2;</option>
+                            <option value="size-5">101~130m&sup2;</option>
+                            <option value="size-6">131~165m&sup2;</option>
+                            <option value="size-7">166m&sup2; 이상</option>
+                        </select>
+                        <button class="reset">초기화</button>
+                        <button class="self">직접검색</button>
+                    </div>
+                    <div class="xi-explain">
+                        <p class="respect">
+                            <span>RESPECT</span><br>
+                            <span>YOUR LIFE</span>
+                        </p>
+                        <p>당신만의 시간을 위해 어디론가 떠나지마세요<br>
+                            새로운 경험의 설렘을 먼 곳에서 찾지마세요<br>
+                            여행의 여유로움이 일상이 되는 이것이 바로<br>
+                            자이가 만들어가는 이 시대의 자이로움</p>
+                        <p>
+                            머무는 공간부터 누리는 경험까지 전에 없던 공간과<br>
+                            커뮤니티 서비스의 미래가 자이에서<br>
+                            새롭게 시작됩니다
+                        </p>
+                    </div>
+                </div>
+                <div class="pick-right">
+                    <ul class="result-left">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <div>
+                                    <button class="sell">분양중</button>
+                                    <p>생활의 완성,그 이상의 가치</p>
+                                    <strong>복대자이 더 스카이</strong>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <div>
+                                    <button class="work">공사중</button>
+                                    <p>푸른빛의 자부심</p>
+                                    <strong>남천자이</strong>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <div>
+                                    <button class="sell">분양중</button>
+                                    <p>탁월한 삶의 품격을 향유하다.</p>
+                                    <strong>영등포자이 디그니티</strong>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="result-right">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <div>
+                                    <button class="move">입주중</button>
+                                    <p>특별함,그 이상의 새로운 세상</p>
+                                    <strong>철산자이 더 헤리티지</strong>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <div>
+                                    <button class="sell">분양중</button>
+                                    <p>기대 그 이상의 가치를 누리다</p>
+                                    <strong>고덕자이 센트로</strong>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <div>
+                                    <button class="move">입주중</button>
+                                    <p>1,348세대 대단지에서 누리는 특별한 가치</p>
+                                    <strong>북천안자이 포레스트</strong>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="collage">
+            <div class="xicollage">
+                <span>Xi</span>
+                <span>Collage</span>
+            </div>
+            <strong>Xi Collage</strong>
+            <div class="contents-container">
+                <div class="video-explain">
+                    <strong>자이 TV</strong>
+                    <p>입주 단지의<br>
+                        생생한 현장과 부동산 전문가의<br>
+                        TIP까지 전하는 유튜브 채널<br>
                     </p>
-                    <div class="img-container">
-                        <img src="../assets/images/main/xi_main1.png" alt="자이 아파트단지 이미지">
-                        <img src="../assets/images/main/xi_main2.png" alt="자이 아파트 로고 이미지">
+                    <ul>
+                        <li><button></button></li>
+                        <li><button></button></li>
+                        <li><button></button></li>
+                        <li><button></button></li>
+                        <li><span>2 / 4</span></li>
+                    </ul>
+                </div>
+                <div id="collageContainer">
+                    <video class="collage-video" src="../assets/video/hero01.mp4" nodownload ></video>
+                    <video class="collage-video" src="../assets/video/hero02.mp4" nodownload ></video>
+                    <video class="collage-video" src="../assets/video/hero03.mp4" nodownload ></video>
+                    <button onclick="collageplay()" id="collagePlay"><img src="../assets/images/main/collage_play_btn.png" alt="동영상 재생 버튼"></button>
+                    <button onclick="collageStop()" id="collageStop"><img src="../assets/images/header/stop_png.png" alt="동영상 멈춤 버튼"></button>
+                </div>
+            </div>
+        </section>
+        <section id="xiNews">
+            <div class="title-wrapper">
+                <span>Xi News</span>
+                <strong>Xi News</strong>
+            </div>
+            <div class="news-inner">
+                <div class="news-content">
+                    <div class="img-wrapper"><img src="../assets/images/main/news_1.png" alt="뉴스 썸네일"></div>
+                    <div class="text-container">
+                        <strong>GS건설, 안산 선부연립1구역 재건축 수주</strong>
+                        <p>GS건설이 안산 선부연립1구역 재건축 사업을 수주했다.<br>
+                            5일 업계에 따르면 안산 선부연립1구역 재건축 조합이 지난 4일 시공사 선정총회를 개최해 GS건설을 시공사로 선정했다.<br>
+                            이 사업은 경기도 안산시 단원구 선부동 963번지 일대 구역면적 약 4만6908m&sup2;에 지하 2층~지상 35층 아파트 8개동<br>
+                            922가구 등을 건립하는 것으로, 공사금액은 2945억원이다.</p>
+                        <div>
+                            <span>2023.02.06</span>
+                            <a href="javascript:void(0)">More</a>
+                        </div>    
                     </div>
                 </div>
-                <p class="intelligent">intelligent</p>
-            </section>
-            <section id="customerPick">
-                <div class="pick-inner">
-                    <div class="pick-left">
-                        <div class="search">
-                            <p>고객님께 맞는<br> 자이 아파트를 찾아보세요.</p>
-                            <select name="situation" id="situation">
-                                <option value="situation-1">분양 상태</option>
-                                <option value="situation-2">전체</option>
-                                <option value="situation-3">분양예정</option>
-                                <option value="situation-4">분양중</option>
-                            </select>
-                            <select name="zone" id="zone">
-                                <option value="zone-1">분양 지역</option>
-                                <option value="zone-2">전체</option>
-                                <option value="zone-3">수도권</option>
-                                <option value="zone-4">강원지역</option>
-                                <option value="zone-5">충청지역</option>
-                                <option value="zone-5">호남지역</option>
-                                <option value="zone-5">영남지역</option>
-                            </select>
-                            <select name="size" id="size">
-                                <option value="size-1">분양 면적</option>
-                                <option value="size-2">전체</option>
-                                <option value="size-3">0~65m&sup2;</option>
-                                <option value="size-4">66~100m&sup2;</option>
-                                <option value="size-5">101~130m&sup2;</option>
-                                <option value="size-6">131~165m&sup2;</option>
-                                <option value="size-7">166m&sup2; 이상</option>
-                            </select>
-                            <button class="reset">초기화</button>
-                            <button class="self">직접검색</button>
-                        </div>
-                        <div class="xi-explain">
-                            <p class="respect">
-                                <span>RESPECT</span><br>
-                                <span>YOUR LIFE</span>
-                            </p>
-                            <p>당신만의 시간을 위해 어디론가 떠나지마세요<br>
-                                새로운 경험의 설렘을 먼 곳에서 찾지마세요<br>
-                                여행의 여유로움이 일상이 되는 이것이 바로<br>
-                                자이가 만들어가는 이 시대의 자이로움</p>
-                            <p>
-                                머무는 공간부터 누리는 경험까지 전에 없던 공간과<br>
-                                커뮤니티 서비스의 미래가 자이에서<br>
-                                새롭게 시작됩니다
-                            </p>
-                        </div>
-                    </div>
-                    <div class="pick-right">
-                        <ul class="result-left">
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>
-                                        <button class="sell">분양중</button>
-                                        <p>생활의 완성,그 이상의 가치</p>
-                                        <strong>복대자이 더 스카이</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>
-                                        <button class="work">공사중</button>
-                                        <p>푸른빛의 자부심</p>
-                                        <strong>남천자이</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>
-                                        <button class="sell">분양중</button>
-                                        <p>탁월한 삶의 품격을 향유하다.</p>
-                                        <strong>영등포자이 디그니티</strong>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="result-right">
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>
-                                        <button class="move">입주중</button>
-                                        <p>특별함,그 이상의 새로운 세상</p>
-                                        <strong>철산자이 더 헤리티지</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>
-                                        <button class="sell">분양중</button>
-                                        <p>기대 그 이상의 가치를 누리다</p>
-                                        <strong>고덕자이 센트로</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <div>
-                                        <button class="move">입주중</button>
-                                        <p>1,348세대 대단지에서 누리는 특별한 가치</p>
-                                        <strong>북천안자이 포레스트</strong>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                <div class="news-content">
+                    <div class="img-wrapper"><img src="../assets/images/main/news_2.png" alt="뉴스 썸네일"></div>
+                    <div class="text-container">
+                        <strong>복대자이 더 스카이 ‘최고 49층’ 청주가 한눈에</strong>
+                        <p>GS건설이 지난 3일 ‘복대자이 더 스카이’ 견본주택을 열고 분양에 들어갔다. 충북 청주시 흥덕구 복대동 100-28번지<br>
+                        일대에 들어서는 '복대자이 더 스카이'는 지하 3층~지상 최고 49개층 3개동, 전용면적 84~103m&sup2; 총 715가구로 조성된다.</p>
+                        <div>
+                            <span>2023.02.06</span>
+                            <a href="javascript:void(0)">More</a>
+                        </div>    
                     </div>
                 </div>
-            </section>
-            <section id="collage">
-                <!-- <div class="collage-inner"> -->
-                    <div class="xicollage">
-                        <span>Xi</span>
-                        <span>Collage</span>
+                <div class="news-content">
+                    <div class="img-wrapper"><img src="../assets/images/main/news_3.png" alt="뉴스 썸네일"></div>
+                    <div class="text-container">
+                        <strong>강동 헤리티지 자이, 분양 한파 뚫고 ‘완판’</strong>
+                        <p>‘올림픽파크 포레온(둔촌주공 재건축)’과 비교해 4억 원 가량 저렴해 청약 과정에서 흥행한 ‘강동 헤리티지 자이’가<br>
+                            계약률 100%를 달성해 조기 '완판'에 성공했다.</p>
+                        <div>
+                            <span>2023.01.17</span>
+                            <a href="javascript:void(0)">More</a>
+                        </div>    
                     </div>
-                    <strong>Xi Collage</strong>
-                    <div class="contents-container">
-                        <div class="">
-                        </div>
-                        <div class="video-wrapper">
-                            <video src="../assets/video/hero01.mp4"></video>
-                        </div>
-                    </div>
-                <!-- </div> -->
-            </section>
-            <footer id="footer"></footer>
+                </div>
+            </div>
+        </section>
+        <footer id="footer"></footer>
     </div>
 </body>
 

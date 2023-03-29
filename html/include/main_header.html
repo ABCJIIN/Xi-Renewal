@@ -5,10 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xi-renewal-main-header</title>
-    <!-- slick 슬라이더 -->
-    <link rel="stylesheet" href="../../assets/slick/slick.css">
-    <link rel="stylesheet" href="../../assets/slick/slick-theme.css">
-    <script src="../../assets/slick/slick.min.js"></script>
     <script>
         $(document).ready(function(){
             $('#videoSlider').slick({
@@ -33,12 +29,12 @@
     <script>
         $('#videoPlay').trigger('click');
         function videoPlay() {
-            $('video').trigger('play');
+            $('.hd-video').trigger('play');
             $('#videoPlay').hide();
             $('#videoPause').show();
         }
         function videoPause() {
-            $('video').trigger('pause');
+            $('.hd-video').trigger('pause');
             $('#videoPlay').show();
             $('#videoPause').hide();
         }
@@ -49,13 +45,13 @@
     <div class="header-wrap main-header">
         <div id="videoSlider">
             <div>
-                <video id="video1" src="../../assets/video/hero01.mp4" autoplay loop muted nodownload poster="../../assets/images/header/main_header.png"></video>
+                <video id="video1" class="hd-video" src="../../assets/video/hero01.mp4" autoplay loop muted nodownload poster="../../assets/images/header/main_header.png"></video>
             </div>
             <div>
-                <video id="video2" src="../../assets/video/hero02.mp4" autoplay loop muted nodownload poster="../../assets/images/header/main_header.png"></video>
+                <video id="video2" class="hd-video" src="../../assets/video/hero02.mp4" autoplay loop muted nodownload poster="../../assets/images/header/main_header.png"></video>
             </div>
             <div>
-                <video id="video3" src="../../assets/video/hero03.mp4" autoplay loop muted nodownload poster="../../assets/images/header/main_header.png"></video>
+                <video id="video3" class="hd-video" src="../../assets/video/hero03.mp4" autoplay loop muted nodownload poster="../../assets/images/header/main_header.png"></video>
             </div>
         </div>
         <div class="btn-wrap">
