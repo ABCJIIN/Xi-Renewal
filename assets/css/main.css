@@ -148,6 +148,7 @@
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
+    /* overflow: hidden; */
 }
 
 #customerPick .pick-inner .pick-left {
@@ -207,7 +208,13 @@
     background: #000000;
 }
 
-#customerPick .pick-inner .pick-left button {
+
+#customerPick .pick-inner .pick-left .search .btn-container  {
+    width: 100%;
+}
+
+
+#customerPick .pick-inner .pick-left .search  button {
     color: #ffffff;
     border: none;
     font-family: "SD Gothic Neo";
@@ -219,18 +226,22 @@
     cursor: pointer;
 }
 
-#customerPick .pick-inner .pick-left .reset {
+#customerPick .pick-inner .pick-left .search .reset {
     background: #006b86;
     margin-top: 6rem;
-
 }
 
-#customerPick .pick-inner .pick-left .self {
+#customerPick .pick-inner .pick-left .search .self {
     background: #b3a696;
     margin-top: 2rem;
 }
 
+/* #customerPick .pick-inner .pick-right .mb-result {
+    display: none;
+} */
+
 #customerPick .pick-inner .xi-explain {
+    /* position: relative; */
     padding-top: 45rem;
 }
 
@@ -274,7 +285,17 @@
     display: flex;
     flex-direction: row;
     gap: 5rem;
+    /* overflow: hidden; */
 }
+
+#customerPick .pick-inner .pick-right .mb-result {
+    display: none;
+}
+
+#customerPick .pick-inner .pick-right .mb-btn-container {
+    display: none;
+}
+
 
 #customerPick .pick-inner .pick-right .result-left {
     padding-top: 20.3rem;
@@ -329,10 +350,10 @@
     height: 63rem;
 }
 
-#customerPick .pick-inner .pick-right ul li div a {
+/* #customerPick .pick-inner .pick-right ul li div a {
     width: 100%;
     height: 100%;
-}
+} */
 
 #customerPick .pick-inner .pick-right ul li div button {
     border: none;
@@ -612,6 +633,11 @@
     width: 74.7rem;
     padding-left: 4.5rem;
 }
+
+#xiNews .news-inner .news-content .text-container .mb-br {
+    display: none;
+}
+
 #xiNews .news-inner .news-content .text-container strong {
     font-family: "SD Gothic Neo";
     font-weight: 500;
@@ -731,19 +757,17 @@
         font-size: 8px
     }
 
-    /* #xiNews .title-wrapper span {
+    #xiNews .title-wrapper span {
         left: -40rem;
         top: 55rem;
-        font-size: 28rem;
+        font-size: 25rem;
     }
-    
+
     #xiNews .title-wrapper strong {
         top: 65rem;
-        left: 7.5rem;
+        left: 0rem;
         font-size: 8rem;
-    } */
-
-
+    }
 }
 
 /*  ~1200px */
@@ -945,36 +969,267 @@
         height: 60rem;
     }
 
+    #intro .intelligent {
+        right: -80rem;
+        bottom: 10rem;
+        font-size: 30rem;
+    }
+    
+    
+    @keyframes intelligent {
+        from {
+            right: -150rem;
+        }
+        to {
+            right: -80rem;
+        }
+    }
+
+
+    #customerPick {
+        background: url(../images/main/apartment_search_bg_mb.png) no-repeat bottom/cover;
+    }
+
     #customerPick .pick-inner {
         width: calc(100% - 8rem);
         padding: 10rem 4rem 10rem 4rem;
+        height: 100%;
         flex-direction: column;
     }
 
     #customerPick .pick-inner .pick-left {
         width: 100%;
         max-width: 100%;
-        padding-right: 0;
+        height: 250rem;
     }
 
     #customerPick .pick-inner .pick-left .search {
         position: static;
     }
 
-    #customerPick .pick-inner .pick-left .btn-container {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
-
-    #customerPick .pick-inner .pick-left button {
-        width: 5rem;
-        margin: 0;
-        padding: 0;
-    }
-
     #customerPick .pick-inner .pick-left .search select {
         width: 100%;
+    }
+
+    #customerPick .pick-inner .pick-left .search .btn-container {
+        width: 100%;
+        display: flex;
+    }
+
+    #customerPick .pick-inner .pick-left .search button {
+        width: 25rem;
+    }
+
+    #customerPick .pick-inner .pick-left .search .self {
+        margin-top: 0;
+    }
+
+    #customerPick .pick-inner .xi-explain {
+        padding-top: 100rem;
+    }
+
+    #customerPick .pick-inner .xi-explain .respect {
+        position: relative;
+        font-size: 10rem;
+    }
+
+    #customerPick .pick-inner .xi-explain p:nth-of-type(2) {
+        padding-top: 5.7rem;
+    }
+    
+    #customerPick .pick-inner .xi-explain p:nth-of-type(3) {
+        padding-top: 5.7rem;
+    }
+
+    #customerPick .pick-inner .pick-right {
+        position: absolute;
+        top: 75rem;
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 4rem);
+        height: 95.2rem;
+        overflow: visible;
+    }
+
+    #customerPick .pick-inner .pick-right .result-left ,
+    #customerPick .pick-inner .pick-right .result-right {
+        display: none;
+    }
+
+    #customerPick .pick-inner .pick-right .mb-btn-container {
+        display: block;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #customerPick .pick-inner .pick-right .mb-btn-container button {
+        background: transparent;
+        border: none;
+        height: 3.2rem;
+    }
+
+    #customerPick .pick-inner .pick-right .mb-btn-container #resultPrev {
+        padding-right: 4rem;
+    }
+
+    #customerPick .pick-inner .pick-right .mb-btn-container #resultNext {
+        padding-left: 4rem;
+    }
+
+    #customerPick .pick-inner .pick-right .mb-btn-container button img {
+        height: 100%;
+    }
+
+    #customerPick .pick-inner .pick-right .mb-btn-container span {
+        font-family: "SD Gothic Neo";
+        font-weight: 700;
+        font-size: 3.2rem;
+        color: #ffffff;
+    }
+
+    #customerPick .pick-inner .pick-right .mb-result {
+        width: 100%;
+        height: 73rem;;
+        display: block;
+    }
+
+    #customerPick .pick-inner .pick-righ .mb-result .mb-result-inner {
+        width: 100%;
+        height: 73rem;
+    }
+
+    #customerPick .pick-inner .mb-result ul li:nth-of-type(1)  div {
+        background: url(../images/main/apartment_bg_1.png) no-repeat center/cover ;
+    }
+
+    #customerPick .pick-inner .mb-result ul li:nth-of-type(2)  div {
+        background: url(../images/main/apartment_bg_2.png) no-repeat center/cover ;
+    }
+
+    #customerPick .pick-inner .mb-result ul li:nth-of-type(3)  div {
+        background: url(../images/main/apartment_bg_3.png) no-repeat center/cover;
+    }
+
+    #customerPick .pick-inner .mb-result ul li:nth-of-type(4)  div {
+        background: url(../images/main/apartment_bg_4.png) no-repeat center/cover;
+    }
+
+    #customerPick .pick-inner .mb-result ul li:nth-of-type(5)  div {
+        background: url(../images/main/apartment_bg_5.png) no-repeat center/cover;
+    }
+
+    #customerPick .pick-inner .mb-result ul li:nth-of-type(6)  div {
+        background: url(../images/main/apartment_bg_6.png) no-repeat center/cover;
+    }
+
+    #customerPick .pick-inner .pick-right ul li div {
+        width: 70%;
+        height: 73rem;
+    }
+
+    #collage {
+        height: 142rem;
+    }
+
+    #collage .xicollage {
+        font-size: 30rem;
+        height: 14.3rem;
+    }
+
+    #collage .xicollage span:nth-of-type(2) {
+        top: 35rem;
+        left: 10rem;
+    }
+
+    #collage > strong {
+        left: 4rem;
+        font-size: 7rem;
+    }
+
+    #collage .contents-container .video-explain {
+        padding: 0 5rem;
+        width: 42rem;
+        height: 52rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    #collage .contents-container .video-explain ul {
+        display: none;
+    }
+
+    #collage .contents-container #collageContainer {
+        top: -30rem;
+        width: 100%;
+        height: 50rem;
+    }
+
+    #xiNews .title-wrapper span {
+        left: -46rem;
+        font-size: 25rem;
+    }
+
+    #xiNews .title-wrapper strong {
+        top: 25rem;
+        left: -12rem;
+        font-size: 10rem;
+    }
+
+    #xiNews .news-inner {
+        width: calc(100% - 8rem);
+        padding: 20rem 4rem;
+        align-items: flex-end;
+        gap: 14rem;
+    }
+
+    #xiNews .news-inner .news-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #xiNews .news-inner .news-content:nth-of-type(2) {
+        padding-right: 16rem;
+    }
+
+    #xiNews .news-inner .news-content .img-wrapper {
+        width: 45rem;
+        height: 55rem;
+    }
+
+    #xiNews .news-inner .news-content .text-container {
+        height: 21rem;
+        width: 45rem;
+        padding-left: 0;
+        padding-top: 4rem;
+    }
+
+    #xiNews .news-inner .news-content .text-container .mb-br {
+        display: block;
+    }
+
+    #xiNews .news-inner .news-content .text-container strong {
+        font-weight: 700;
+        font-size: 4.4rem;
+    }
+
+    #xiNews .news-inner .news-content .text-container p {
+        display: none;
+    }
+
+    #xiNews .news-inner .news-content .text-container > div {
+        width: 45rem;
+    }
+
+    #xiNews .news-inner .news-content .text-container > div span {
+        font-weight: 700;
+        font-size: 2.8rem;
+    }
+
+    #xiNews .news-inner .news-content .text-container > div a {
+        display: none;
     }
 
 

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xi-renewal-main</title>
+    <link rel="shortcut icon" href="#">
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script src="../assets/js/common.js"></script>
     <link rel="stylesheet" href="../assets/css/fonts.css">
@@ -57,13 +58,20 @@
         });
     </script>
     <script>
-
-        var playPromise = video.play();
-
+        $( document ).ready( function() {
+            $( '.mb-result-inner' ).slick({
+                slide : "li",
+                autoplay: false,
+                arrows: true,
+                prevArrow : $('#resultPrev'),   
+                nextArrow : $('#resultNext'),
+            });
+        });
+    </script>
+    <script>
         $('#collagePlay').trigger('click');
         function collageplay() {
             $('.collage-video').trigger('play');
-            if (playPromise !== undefined) { playPromise.then((_) => {}).catch((error) => {}); }
             $('#collagePlay').hide();
             $('#collageStop').show();
         }
@@ -208,6 +216,69 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="mb-result">
+                        <ul class="mb-result-inner">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div>
+                                        <button class="sell">분양중</button>
+                                        <p>생활의 완성,그 이상의 가치</p>
+                                        <strong>복대자이 더 스카이</strong>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div>
+                                        <button class="work">공사중</button>
+                                        <p>푸른빛의 자부심</p>
+                                        <strong>남천자이</strong>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div>
+                                        <button class="sell">분양중</button>
+                                        <p>탁월한 삶의 품격을 향유하다.</p>
+                                        <strong>영등포자이 디그니티</strong>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div>
+                                        <button class="move">입주중</button>
+                                        <p>특별함,그 이상의 새로운 세상</p>
+                                        <strong>철산자이 더 헤리티지</strong>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div>
+                                        <button class="sell">분양중</button>
+                                        <p>기대 그 이상의 가치를 누리다</p>
+                                        <strong>고덕자이 센트로</strong>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div>
+                                        <button class="move">입주중</button>
+                                        <p>1,348세대 대단지에서 누리는 특별한 가치</p>
+                                        <strong>북천안자이 포레스트</strong>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-btn-container">
+                        <button onclick="resultPrev()" id="resultPrev"><img src="../assets/images/header/video_prev.png" alt="이전 버튼"></button>
+                        <span>1 / 6</span>
+                        <button onclick="resultNext()" id="resultNext"><img src="../assets/images/header/video_next.png" alt="다음 버튼"></button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -250,7 +321,7 @@
                 <div class="news-content">
                     <div class="img-wrapper"><img src="../assets/images/main/news_1.png" alt="뉴스 썸네일"></div>
                     <div class="text-container">
-                        <strong>GS건설, 안산 선부연립1구역 재건축 수주</strong>
+                        <strong>GS건설,<br class="mb-br"> 안산 선부연립1구역<br class="mb-br"> 재건축 수주</strong>
                         <p>GS건설이 안산 선부연립1구역 재건축 사업을 수주했다.<br>
                             5일 업계에 따르면 안산 선부연립1구역 재건축 조합이 지난 4일 시공사 선정총회를 개최해 GS건설을 시공사로 선정했다.<br>
                             이 사업은 경기도 안산시 단원구 선부동 963번지 일대 구역면적 약 4만6908m&sup2;에 지하 2층~지상 35층 아파트 8개동<br>
@@ -264,7 +335,7 @@
                 <div class="news-content">
                     <div class="img-wrapper"><img src="../assets/images/main/news_2.png" alt="뉴스 썸네일"></div>
                     <div class="text-container">
-                        <strong>복대자이 더 스카이 ‘최고 49층’ 청주가 한눈에</strong>
+                        <strong>복대자이 더 스카이<br class="mb-br"> ‘최고 49층’ 청주가 한눈에</strong>
                         <p>GS건설이 지난 3일 ‘복대자이 더 스카이’ 견본주택을 열고 분양에 들어갔다. 충북 청주시 흥덕구 복대동 100-28번지<br>
                         일대에 들어서는 '복대자이 더 스카이'는 지하 3층~지상 최고 49개층 3개동, 전용면적 84~103m&sup2; 총 715가구로 조성된다.</p>
                         <div>
@@ -276,7 +347,7 @@
                 <div class="news-content">
                     <div class="img-wrapper"><img src="../assets/images/main/news_3.png" alt="뉴스 썸네일"></div>
                     <div class="text-container">
-                        <strong>강동 헤리티지 자이, 분양 한파 뚫고 ‘완판’</strong>
+                        <strong>강동 헤리티지 자이,<br class="mb-br"> 분양 한파 뚫고 ‘완판’</strong>
                         <p>‘올림픽파크 포레온(둔촌주공 재건축)’과 비교해 4억 원 가량 저렴해 청약 과정에서 흥행한 ‘강동 헤리티지 자이’가<br>
                             계약률 100%를 달성해 조기 '완판'에 성공했다.</p>
                         <div>

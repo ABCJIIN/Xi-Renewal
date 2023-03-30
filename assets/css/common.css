@@ -9,7 +9,7 @@ a {text-decoration: none;}
 .header-wrap {
     position: relative;
     width: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .common-header {
@@ -857,7 +857,7 @@ a {text-decoration: none;}
 
     .header-wrap .title {
         font-size: 7.2rem;
-        padding-top: 19.2rem;
+        padding-top: 33rem;
         padding-left: 7rem;
         color: #ffffff;
         overflow: hidden;
