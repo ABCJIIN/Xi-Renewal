@@ -171,7 +171,11 @@ a {text-decoration: none;}
     animation: hdscroll 2s infinite;
     box-sizing: border-box;
 }
-
+.main-header .header-bottom .scroll:hover {
+    animation: none !important;
+    opacity: 1;
+    transform: rotate(0) translate(0, 0);
+}
 .main-header .header-bottom .scroll span {
     color: #ffffff;
     font-family: "SD Gothic Neo";

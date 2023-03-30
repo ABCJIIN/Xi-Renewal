@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+* {scroll-behavior: smooth;}
 #intro {
     position: relative;
     width: 100%;
